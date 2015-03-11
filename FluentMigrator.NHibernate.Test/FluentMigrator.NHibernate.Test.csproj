@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{734D84CE-7776-42CC-99E5-82E65301AE6A}</ProjectGuid>
+    <ProjectGuid>{7F37F56F-0D8F-4163-9BDF-C6E4CBE68B00}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FluentMigrator.NHibernate</RootNamespace>
-    <AssemblyName>FluentMigrator.NHibernate</AssemblyName>
+    <RootNamespace>FluentMigrator.NHibernate.Test</RootNamespace>
+    <AssemblyName>FluentMigrator.NHibernate.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -46,55 +46,21 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="xunit">
+      <HintPath>..\packages\xunit.1.9.2\lib\net20\xunit.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FluentExpressionBuilderFactory.cs" />
-    <Compile Include="ITemplate.cs" />
-    <Compile Include="ITemplateFromExpressionFactory.cs" />
-    <Compile Include="MigrationExport.cs" />
-    <Compile Include="IDefinitionsBuilder.cs" />
-    <Compile Include="Migrations.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Migrations.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PartialMigrations.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="Example.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Templates\CSharp\AlterColumn.cs" />
-    <Compile Include="Templates\CSharp\AlterDefaultConstraint.cs" />
-    <Compile Include="Templates\CSharp\AlterSchema.cs" />
-    <Compile Include="Templates\CSharp\AlterTable.cs" />
-    <Compile Include="Templates\CSharp\CreateColumn.cs" />
-    <Compile Include="Templates\CSharp\CreateConstraint.cs" />
-    <Compile Include="Templates\CSharp\CreateForeignKey.cs" />
-    <Compile Include="Templates\CSharp\CreateIndex.cs" />
-    <Compile Include="Templates\CSharp\CreateSchema.cs" />
-    <Compile Include="Templates\CSharp\CreateSequence.cs" />
-    <Compile Include="Templates\CSharp\CreateTable.cs" />
-    <Compile Include="Templates\CSharp\DeleteColumn.cs" />
-    <Compile Include="Templates\CSharp\DeleteConstraint.cs" />
-    <Compile Include="Templates\CSharp\DeleteDefaultConstraint.cs" />
-    <Compile Include="Templates\CSharp\DeleteForeignKey.cs" />
-    <Compile Include="Templates\CSharp\DeleteIndex.cs" />
-    <Compile Include="Templates\CSharp\DeleteSchema.cs" />
-    <Compile Include="Templates\CSharp\DeleteSequence.cs" />
-    <Compile Include="Templates\CSharp\DeleteTable.cs" />
-    <Compile Include="Templates\CSharp\RenameColumn.cs" />
-    <Compile Include="Templates\CSharp\RenameTable.cs" />
-    <Compile Include="Templates\ExpressionTemplate.cs" />
-    <Compile Include="Templates\CSharp\Migration.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations.tt">
-      <Generator>TextTemplatingFilePreprocessor</Generator>
-      <LastGenOutput>Migrations.cs</LastGenOutput>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
