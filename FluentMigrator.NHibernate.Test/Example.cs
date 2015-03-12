@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,8 +11,13 @@ namespace FluentMigrator.NHibernate.Test
     {
         public override void Up()
         {
-            Create.Index("").OnTable("")
-                .OnColumn().
+            
+            //Create.Table("")
+            //    .WithColumn("").AsInt32().PrimaryKey("")
+                
+                
+                    
+
             throw new NotImplementedException();
             
         }

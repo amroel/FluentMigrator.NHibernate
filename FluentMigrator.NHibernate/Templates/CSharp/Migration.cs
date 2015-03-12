@@ -14,8 +14,9 @@ namespace FluentMigrator.NHibernate.Templates.CSharp
         public virtual string Name { get; set; }
         public virtual IEnumerable<MigrationExpressionBase> Expressions { get; set; }
         public virtual ITemplateFromExpressionFactory TemplateFactory { get; set; }
+        public virtual string SerializedConfiguration { get; set; }
 
-
+        public const string ConfigurationData = "";
         public void WriteTo(TextWriter tw)
         {
             var expressions = Expressions.ToList();
@@ -47,6 +48,12 @@ namespace FluentMigrator.NHibernate.Templates.CSharp
 
             tw.WriteLine("\tpublic class "+Name+" : Migration");
             tw.WriteLine("\t{");
+            tw.WriteLine();
+            tw.Write("\tpublic const string ConfigurationData = \"");
+            tw.Write(SerializedConfiguration);
+            tw.Write("\";");
+            tw.WriteLine();
+            tw.WriteLine();
             tw.WriteLine("\t\tpublic override void Up()");
             tw.WriteLine("\t\t\t{");
             foreach (var templ in expressions.Select(e=>TemplateFactory.GetTemplate(e)))

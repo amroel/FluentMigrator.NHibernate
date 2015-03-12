@@ -48,16 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FluentExpressionBuilderFactory.cs" />
+    <Compile Include="TemplateFromExpressionFactory.cs" />
     <Compile Include="ITemplate.cs" />
     <Compile Include="ITemplateFromExpressionFactory.cs" />
     <Compile Include="MigrationExport.cs" />
     <Compile Include="IDefinitionsBuilder.cs" />
-    <Compile Include="Migrations.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Migrations.tt</DependentUpon>
-    </Compile>
     <Compile Include="PartialMigrations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Templates\CSharp\AlterColumn.cs" />
@@ -85,10 +80,6 @@
     <Compile Include="Templates\CSharp\Migration.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Migrations.tt">
-      <Generator>TextTemplatingFilePreprocessor</Generator>
-      <LastGenOutput>Migrations.cs</LastGenOutput>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

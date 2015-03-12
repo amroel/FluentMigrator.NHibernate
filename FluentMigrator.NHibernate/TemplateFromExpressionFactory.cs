@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FluentMigrator.Expressions;
-using System.Linq.Expressions;
+using FluentMigrator.NHibernate.Templates;
 
 namespace FluentMigrator.NHibernate
 {
@@ -36,7 +34,7 @@ namespace FluentMigrator.NHibernate
         }
         private static bool IsAnExpressionTemplate(Type type)
         {
-            return type.IsGenericType && type.GetGenericTypeDefinition() == typeof (Templates.ExpressionTemplate<>);
+            return type.IsGenericType && type.GetGenericTypeDefinition() == typeof (ExpressionTemplate<>);
         }
 
         public ITemplate GetTemplate(MigrationExpressionBase expr)
