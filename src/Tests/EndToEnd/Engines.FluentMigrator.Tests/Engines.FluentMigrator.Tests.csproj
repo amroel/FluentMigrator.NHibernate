@@ -39,6 +39,12 @@
     <Reference Include="FluentAssertions.Core">
       <HintPath>..\..\..\..\packages\FluentAssertions.3.3.0\lib\net45\FluentAssertions.Core.dll</HintPath>
     </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\..\..\..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\..\..\packages\NHibernate.4.0.3.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -70,6 +76,10 @@
     <ProjectReference Include="..\TestTarget.Firebird\TestTarget.Firebird.csproj">
       <Project>{5597f785-cff5-44ec-8fd9-406a38d01bba}</Project>
       <Name>TestTarget.Firebird</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestTarget\TestTarget.csproj">
+      <Project>{32aa67ab-85ba-4d84-bf71-21ae38ee3d3b}</Project>
+      <Name>TestTarget</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
