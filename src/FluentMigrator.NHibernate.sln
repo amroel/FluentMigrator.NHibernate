@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentMigrator.NHibernate", "FluentMigrator.NHibernate\FluentMigrator.NHibernate.csproj", "{734D84CE-7776-42CC-99E5-82E65301AE6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentMigrator.NHibernate.Test", "Tests\EndToEnd\FluentMigrator.NHibernate.Test\FluentMigrator.NHibernate.Test.csproj", "{7F37F56F-0D8F-4163-9BDF-C6E4CBE68B00}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{4828728D-C3D3-43B1-B9DD-F75EC71D4C43}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EndToEnd", "EndToEnd", "{D1956157-9018-43A0-ACB8-0CB5872EA0AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit", "Unit", "{1FF70B24-AC47-49B2-B41B-6D860618067E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engines.FluentMigrator.Tests", "Tests\EndToEnd\Engines.FluentMigrator.Tests\Engines.FluentMigrator.Tests.csproj", "{7BFE5CE2-C27E-42CB-B54B-3F0A45176050}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{734D84CE-7776-42CC-99E5-82E65301AE6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{734D84CE-7776-42CC-99E5-82E65301AE6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{734D84CE-7776-42CC-99E5-82E65301AE6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{734D84CE-7776-42CC-99E5-82E65301AE6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F37F56F-0D8F-4163-9BDF-C6E4CBE68B00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F37F56F-0D8F-4163-9BDF-C6E4CBE68B00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F37F56F-0D8F-4163-9BDF-C6E4CBE68B00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F37F56F-0D8F-4163-9BDF-C6E4CBE68B00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BFE5CE2-C27E-42CB-B54B-3F0A45176050}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BFE5CE2-C27E-42CB-B54B-3F0A45176050}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BFE5CE2-C27E-42CB-B54B-3F0A45176050}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BFE5CE2-C27E-42CB-B54B-3F0A45176050}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7F37F56F-0D8F-4163-9BDF-C6E4CBE68B00} = {D1956157-9018-43A0-ACB8-0CB5872EA0AA}
+		{D1956157-9018-43A0-ACB8-0CB5872EA0AA} = {4828728D-C3D3-43B1-B9DD-F75EC71D4C43}
+		{1FF70B24-AC47-49B2-B41B-6D860618067E} = {4828728D-C3D3-43B1-B9DD-F75EC71D4C43}
+		{7BFE5CE2-C27E-42CB-B54B-3F0A45176050} = {D1956157-9018-43A0-ACB8-0CB5872EA0AA}
+	EndGlobalSection
+EndGlobal
