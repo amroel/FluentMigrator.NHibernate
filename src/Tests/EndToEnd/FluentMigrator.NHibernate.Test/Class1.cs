@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using FluentMigrator.Expressions;
 using Xunit;
 
@@ -19,14 +15,8 @@ namespace FluentMigrator.NHibernate.Test
 
             foreach (var e in expressions)
             {
-                Console.WriteLine(GetClass(e));
+                //Console.WriteLine(GetClass(e));
             }
-
-
-
-
         }
-
-     
     }
 }
