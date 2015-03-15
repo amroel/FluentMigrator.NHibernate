@@ -9,11 +9,11 @@ using NHibernate.Driver;
 
 namespace TestTarget.Firebird
 {
-	public class Firebird : Database
+	public class Firebird : TestDatabase
 	{
 		private readonly string _connectionString = string.Format("User=SYSDBA;Password=masterkey;Database={0};", Path.Combine(Directory.GetCurrentDirectory(), "fbtest.fdb"));
 
-		public override void CreateDatabase()
+		public void CreateDatabase()
 		{
 			if (File.Exists("fbtest.fdb"))
 				FbConnection.DropDatabase(_connectionString);
@@ -21,14 +21,14 @@ namespace TestTarget.Firebird
 			FbConnection.CreateDatabase(_connectionString);
 		}
 
-		public override void ConfigureDialect(IDbIntegrationConfigurationProperties dbProperteis)
+		public void ConfigureDialect(IDbIntegrationConfigurationProperties dbProperteis)
 		{
 			dbProperteis.Dialect<FirebirdDialect>();
 			dbProperteis.Driver<FirebirdClientDriver>();
 			dbProperteis.ConnectionString = _connectionString;
 		}
 
-		public override void DropDatabase()
+		public void DropDatabase()
 		{
 			FbConnection.ClearAllPools();
 
@@ -51,7 +51,7 @@ namespace TestTarget.Firebird
 			}
 		}
 
-		public override bool TableExists(string tableName)
+		public bool TableExists(string tableName)
 		{
 			return IsInDatabase(cmd =>
 			{
@@ -60,7 +60,7 @@ namespace TestTarget.Firebird
 			});
 		}
 
-		public override bool ColumnExists(string tableName, string columnName)
+		public bool ColumnExists(string tableName, string columnName)
 		{
 			return IsInDatabase(cmd =>
 			{
@@ -70,12 +70,12 @@ namespace TestTarget.Firebird
 			});
 		}
 
-		public override bool SupportsSequences
+		public bool SupportsSequences
 		{
 			get { return true; }
 		}
 
-		public override bool SequenceExists(string sequenceName)
+		public bool SequenceExists(string sequenceName)
 		{
 			return IsInDatabase(cmd =>
 			{
@@ -84,7 +84,7 @@ namespace TestTarget.Firebird
 			});
 		}
 
-		public override bool ForeignKeyExists(string tableName, string fkColumn)
+		public bool ForeignKeyExists(string tableName, string fkColumn)
 		{
 			var sql = new StringBuilder()
 				.AppendLine("select con.rdb$relation_name table_name, ix_seg.rdb$field_name field")

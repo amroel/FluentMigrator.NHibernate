@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{32AA67AB-85BA-4D84-BF71-21AE38EE3D3B}</ProjectGuid>
+    <ProjectGuid>{89998428-78D9-4B2C-A3D5-A3A24C665D1E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestTarget</RootNamespace>
-    <AssemblyName>TestTarget</AssemblyName>
+    <RootNamespace>NHibernate.Migrator.Engines.FluentMigrator</RootNamespace>
+    <AssemblyName>NHibernate.Migrator.Engines.FluentMigrator</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentMigrator">
+      <HintPath>..\..\..\..\packages\FluentMigrator.1.5.0.0\lib\40\FluentMigrator.dll</HintPath>
+    </Reference>
     <Reference Include="Iesi.Collections">
       <HintPath>..\..\..\..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
     </Reference>
@@ -45,11 +48,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestDatabase.cs" />
+    <Compile Include="FluentMigratorMigrationEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\NHibernate.Migrator.Domain\NHibernate.Migrator.Domain.csproj">
+      <Project>{7d5940e1-9bdc-48c9-8984-19b206a077c4}</Project>
+      <Name>NHibernate.Migrator.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
