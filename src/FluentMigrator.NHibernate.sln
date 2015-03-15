@@ -19,17 +19,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTarget.Firebird", "Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTarget", "Tests\EndToEnd\TestTarget\TestTarget.csproj", "{32AA67AB-85BA-4D84-BF71-21AE38EE3D3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernate.Migrator.Tests.Entities", "Tests\NHibernate.Migrator.Tests.Entities\NHibernate.Migrator.Tests.Entities.csproj", "{9CB9B171-D923-41FD-B58E-066B1C40F4CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NhMigrator.Tests.Entities", "Tests\NhMigrator.Tests.Entities\NhMigrator.Tests.Entities.csproj", "{9CB9B171-D923-41FD-B58E-066B1C40F4CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernate.Migrator.Engines.FluentMigrator", "NHibernate.Migrator\Engines\FluentMigrator\NHibernate.Migrator.Engines.FluentMigrator.csproj", "{89998428-78D9-4B2C-A3D5-A3A24C665D1E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NhMigrator.Engines.FluentMigrator", "NhMigrator\Engines\FluentMigrator\NhMigrator.Engines.FluentMigrator.csproj", "{89998428-78D9-4B2C-A3D5-A3A24C665D1E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NHibernate.Migrator", "NHibernate.Migrator", "{3561A74F-B99E-4614-8AC0-C0D2BE9A1837}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NhMigrator", "NhMigrator", "{3561A74F-B99E-4614-8AC0-C0D2BE9A1837}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engines", "Engines", "{D2859A50-24E8-471E-AA7C-03B286365CAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernate.Migrator.Domain", "NHibernate.Migrator\Domain\NHibernate.Migrator.Domain\NHibernate.Migrator.Domain.csproj", "{7D5940E1-9BDC-48C9-8984-19B206A077C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NhMigrator.Domain", "NhMigrator\Domain\NhMigrator.Domain\NhMigrator.Domain.csproj", "{7D5940E1-9BDC-48C9-8984-19B206A077C4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{26A54693-3B49-4FF8-ACAA-A50CAEB19788}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NhMigrator.Domain.Tests", "Tests\Unit\NhMigrator.Domain.Tests\NhMigrator.Domain.Tests.csproj", "{9300CCF4-D539-4271-A8EC-66430C61C914}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{7D5940E1-9BDC-48C9-8984-19B206A077C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D5940E1-9BDC-48C9-8984-19B206A077C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D5940E1-9BDC-48C9-8984-19B206A077C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9300CCF4-D539-4271-A8EC-66430C61C914}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9300CCF4-D539-4271-A8EC-66430C61C914}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9300CCF4-D539-4271-A8EC-66430C61C914}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9300CCF4-D539-4271-A8EC-66430C61C914}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,5 +91,6 @@ Global
 		{D2859A50-24E8-471E-AA7C-03B286365CAC} = {3561A74F-B99E-4614-8AC0-C0D2BE9A1837}
 		{7D5940E1-9BDC-48C9-8984-19B206A077C4} = {26A54693-3B49-4FF8-ACAA-A50CAEB19788}
 		{26A54693-3B49-4FF8-ACAA-A50CAEB19788} = {3561A74F-B99E-4614-8AC0-C0D2BE9A1837}
+		{9300CCF4-D539-4271-A8EC-66430C61C914} = {1FF70B24-AC47-49B2-B41B-6D860618067E}
 	EndGlobalSection
 EndGlobal

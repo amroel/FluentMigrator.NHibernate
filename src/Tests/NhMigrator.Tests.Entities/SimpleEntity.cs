@@ -1,5 +1,5 @@
 ﻿
-namespace NHibernate.Migrator.Tests.Entities
+namespace NhMigrator.Tests.Entities
 {
 	public class SimpleEntity
 	{

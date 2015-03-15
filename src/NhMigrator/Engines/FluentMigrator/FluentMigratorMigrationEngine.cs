@@ -1,13 +1,14 @@
 ﻿using NHibernate.Cfg;
-using NHibernate.Migrator.Domain;
+using NhMigrator.Domain;
 
-namespace NHibernate.Migrator.Engines.FluentMigrator
+namespace NhMigrator.Engines.FluentMigrator
 {
     public class FluentMigratorMigrationEngine : MigrationEngine
     {
-
 		public void Migrate(Configuration nhConfig)
 		{
+			var migrator = new Migrator(this);
+			migrator.Migrate(nhConfig);
 		}
 
 		#region MigrationEngine Members

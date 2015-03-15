@@ -76,17 +76,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\NHibernate.Migrator\Domain\NHibernate.Migrator.Domain\NHibernate.Migrator.Domain.csproj">
+    <ProjectReference Include="..\..\..\NHibernate.Migrator\Domain\NHibernate.Migrator.Domain\NhMigrator.Domain.csproj">
       <Project>{7d5940e1-9bdc-48c9-8984-19b206a077c4}</Project>
-      <Name>NHibernate.Migrator.Domain</Name>
+      <Name>NhMigrator.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\NHibernate.Migrator\Engines\FluentMigrator\NHibernate.Migrator.Engines.FluentMigrator.csproj">
+    <ProjectReference Include="..\..\..\NHibernate.Migrator\Engines\FluentMigrator\NhMigrator.Engines.FluentMigrator.csproj">
       <Project>{89998428-78d9-4b2c-a3d5-a3a24c665d1e}</Project>
-      <Name>NHibernate.Migrator.Engines.FluentMigrator</Name>
+      <Name>NhMigrator.Engines.FluentMigrator</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\NHibernate.Migrator.Tests.Entities\NHibernate.Migrator.Tests.Entities.csproj">
+    <ProjectReference Include="..\..\NHibernate.Migrator.Tests.Entities\NhMigrator.Tests.Entities.csproj">
       <Project>{9cb9b171-d923-41fd-b58e-066b1c40f4cd}</Project>
-      <Name>NHibernate.Migrator.Tests.Entities</Name>
+      <Name>NhMigrator.Tests.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\TestTarget.Firebird\TestTarget.Firebird.csproj">
       <Project>{5597f785-cff5-44ec-8fd9-406a38d01bba}</Project>

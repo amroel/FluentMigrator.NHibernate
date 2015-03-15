@@ -1,5 +1,5 @@
 
-namespace NHibernate.Migrator.Domain
+namespace NhMigrator.Domain
 {
 	public class Migration
 	{

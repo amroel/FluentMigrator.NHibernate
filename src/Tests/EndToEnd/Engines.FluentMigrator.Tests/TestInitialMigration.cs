@@ -1,12 +1,10 @@
 ﻿using System;
+using FluentAssertions;
 using NHibernate.Cfg;
 using NHibernate.Mapping.ByCode;
-using NHibernate.Migrator.Tests.Entities;
 using TestTarget;
 using TestTarget.Firebird;
 using Xunit;
-using FluentAssertions;
-using NHibernate.Migrator.Engines.FluentMigrator;
 
 namespace Engines.FluentMigrator.Tests
 {
@@ -14,7 +12,7 @@ namespace Engines.FluentMigrator.Tests
 	{
 		private readonly TestDatabase _testTarget;
 		private readonly Configuration _nhConfig = new Configuration();
-		private readonly FluentMigratorMigrationEngine _migrator = new FluentMigratorMigrationEngine();
+		private readonly NhMigrator.Engines.FluentMigrator.FluentMigratorMigrationEngine _migrator = new NhMigrator.Engines.FluentMigrator.FluentMigratorMigrationEngine();
 
 		public TestInitialMigration(Firebird testTarget)
 		{
@@ -37,7 +35,7 @@ namespace Engines.FluentMigrator.Tests
 		private void MapEntity(Action<IIdMapper> idMapper)
 		{
 			var modelMapper = new ModelMapper();
-			modelMapper.Class<SimpleEntity>(map =>
+			modelMapper.Class<NhMigrator.Tests.Entities.SimpleEntity>(map =>
 			{
 				map.Id(x => x.Id, idMapper);
 				map.Property(x => x.IntProperty);

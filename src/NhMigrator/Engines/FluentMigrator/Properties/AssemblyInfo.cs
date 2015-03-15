@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("NHibernate.Migrator.Domain")]
+[assembly: AssemblyTitle("NhMigrator.Engines.FluentMigrator")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("NHibernate.Migrator.Domain")]
+[assembly: AssemblyProduct("NhMigrator.Engines.FluentMigrator")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("b39194b3-e89b-48aa-b897-18500eee5308")]
+[assembly: Guid("7c9587e2-2aba-4649-b2c3-42eb5bbdcf8d")]
 
 // Version information for an assembly consists of the following four values:
 //
