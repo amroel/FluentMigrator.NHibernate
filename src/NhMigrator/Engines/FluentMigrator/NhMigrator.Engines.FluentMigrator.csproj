@@ -55,7 +55,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Domain\NHibernate.Migrator.Domain\NhMigrator.Domain.csproj">
+    <ProjectReference Include="..\..\Domain\NhMigrator.Domain\NhMigrator.Domain.csproj">
       <Project>{7d5940e1-9bdc-48c9-8984-19b206a077c4}</Project>
       <Name>NhMigrator.Domain</Name>
     </ProjectReference>
